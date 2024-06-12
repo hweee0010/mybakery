@@ -1,8 +1,11 @@
-package gamedata.gamelogic;
+package gamedata.gamelogic.consumables;
+
+import gamedata.gamelogic.CafeMenuItem;
+import gamedata.gamelogic.PrepStatus;
 
 import java.awt.image.BufferedImage;
 
-public class Consumable {
+public abstract class Consumable {
     public Integer maxJoy;
     public float quality = 1; // starting quality
     public Integer currentStepIndex = 0; // denotes current step

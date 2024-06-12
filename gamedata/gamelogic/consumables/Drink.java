@@ -1,7 +1,6 @@
 package gamedata.gamelogic.consumables;
 
 import gamedata.gamelogic.CafeMenuItem;
-import gamedata.gamelogic.Consumable;
 import gamedata.gamelogic.PrepStatus;
 
 public class Drink extends Consumable {
