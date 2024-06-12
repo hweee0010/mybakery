@@ -1,11 +1,17 @@
 package gamedata.gamelogic.livingbeings;
 
+import gamedata.gamelogic.BeingType;
+
 public abstract class Human extends LivingBeing{
+    public Human(BeingType type) {
+        super(type);
+    }
+
     /**
-     * pet a dog & induce joy
-     * @param dog dog to be petted
+     * pet a shiba & induce joy
+     * @param shiba dog to be petted
      */
-    public void pet(Dog dog) {
-        dog.petted();
+    public void pet(Shiba shiba) {
+        shiba.petted();
     }
 }
