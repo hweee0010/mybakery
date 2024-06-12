@@ -1,9 +1,14 @@
 package gamedata.gamelogic.consumables;
 
 import gamedata.gamelogic.CafeMenuItem;
+import gamedata.gamelogic.Constants;
 import gamedata.gamelogic.PrepStatus;
+import gamedata.gamelogic.livingbeings.LivingBeing;
 
+import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.util.Objects;
 
 public abstract class Consumable {
     public Integer maxJoy;
@@ -12,12 +17,19 @@ public abstract class Consumable {
     public CafeMenuItem item;
     public PrepStatus[] prepSteps;
     public Integer prepTime; // currently unused attribute
-    public BufferedImage display; // currently unused attribute
+    public BufferedImage image;
 
     public Consumable(CafeMenuItem item, Integer maxJoy, PrepStatus[] prepSteps) {
         this.item = item;
         this.maxJoy = maxJoy;
         this.prepSteps = prepSteps;
+        // open image from resources
+        String imagePath = Constants.RESOURCES_FILEPATH + item + "jpg";
+        try {
+            this.image = ImageIO.read(Objects.requireNonNull(Consumable.class.getResource(imagePath)));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     /**
