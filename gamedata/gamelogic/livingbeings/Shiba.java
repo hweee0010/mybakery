@@ -1,8 +1,9 @@
 package gamedata.gamelogic.livingbeings;
 
 import gamedata.gamelogic.BeingType;
+import gamedata.gamelogic.LivingBeing;
 
-public class Shiba extends LivingBeing{
+public class Shiba extends LivingBeing {
 
     public Shiba() {
         super(BeingType.Shiba);

@@ -1,35 +1,22 @@
-package gamedata.gamelogic.consumables;
+package gamedata.gamelogic;
 
-import gamedata.gamelogic.CafeMenuItem;
-import gamedata.gamelogic.Constants;
-import gamedata.gamelogic.PrepStatus;
-import gamedata.gamelogic.livingbeings.LivingBeing;
+import gamedata.viewcontroller.Entity;
+import gamedata.viewcontroller.Screen;
 
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.io.IOException;
-import java.util.Objects;
-
-public abstract class Consumable {
+public abstract class Consumable extends Entity {
     public Integer maxJoy;
     public float quality = 1; // starting quality
     public Integer currentStepIndex = 0; // denotes current step
     public CafeMenuItem item;
     public PrepStatus[] prepSteps;
     public Integer prepTime; // currently unused attribute
-    public BufferedImage image;
+    //public BufferedImage image;
 
     public Consumable(CafeMenuItem item, Integer maxJoy, PrepStatus[] prepSteps) {
         this.item = item;
         this.maxJoy = maxJoy;
         this.prepSteps = prepSteps;
-        // open image from resources
-        String imagePath = Constants.RESOURCES_FILEPATH + item + "jpg";
-        try {
-            this.image = ImageIO.read(Objects.requireNonNull(Consumable.class.getResource(imagePath)));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        this.image = Screen.readImage(item.toString());
     }
 
     /**
@@ -51,5 +38,9 @@ public abstract class Consumable {
     public void updateStatus(float newQuality) {
         quality = newQuality*quality;
         currentStepIndex ++;
+    }
+
+    @Override public void updateDisplay() {
+        // i genuinely have no idea what this is for lol
     }
 }

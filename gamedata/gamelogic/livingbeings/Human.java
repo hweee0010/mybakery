@@ -1,8 +1,9 @@
 package gamedata.gamelogic.livingbeings;
 
 import gamedata.gamelogic.BeingType;
+import gamedata.gamelogic.LivingBeing;
 
-public abstract class Human extends LivingBeing{
+public abstract class Human extends LivingBeing {
     public Human(BeingType type) {
         super(type);
     }
