@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://crben6bbnbfhs"]
+
+[ext_resource type="Texture2D" uid="uid://03q17uomfoep" path="res://furniture/Cafe_Background.png" id="1_js2qn"]
+[ext_resource type="PackedScene" uid="uid://d1xukht5g8ydh" path="res://scenes/cafe.tscn" id="2_noipf"]
+
+[node name="CafeBg" type="Node2D"]
+
+[node name="CafeBackground" type="Sprite2D" parent="."]
+position = Vector2(-3, 18)
+texture = ExtResource("1_js2qn")
+
+[node name="CafeBackground3" type="Sprite2D" parent="."]
+position = Vector2(-1863, -74)
+texture = ExtResource("1_js2qn")
+
+[node name="CafeBackground2" type="Sprite2D" parent="."]
+position = Vector2(1826, 112)
+texture = ExtResource("1_js2qn")
+
+[node name="Cafe" parent="." instance=ExtResource("2_noipf")]
+position = Vector2(-878, -305)

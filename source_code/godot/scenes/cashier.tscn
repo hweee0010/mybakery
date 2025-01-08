@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://chu404htwyvv7"]
+
+[ext_resource type="Texture2D" uid="uid://cdsack84vh0ma" path="res://characters/Cashier.png" id="1_f56ir"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_txcji"]
+size = Vector2(135, 74)
+
+[node name="Cashier" type="CharacterBody2D"]
+position = Vector2(-29, 7)
+
+[node name="Cashier" type="Sprite2D" parent="."]
+position = Vector2(-1, -2)
+texture = ExtResource("1_f56ir")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(32.5, 108)
+shape = SubResource("RectangleShape2D_txcji")

@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cpyweprbagt4q"]
+
+[ext_resource type="Texture2D" uid="uid://duh3g4du75oj" path="res://characters/Customers_On_Table.png" id="1_nkquk"]
+
+[node name="CustomersOnTable" type="CharacterBody2D"]
+position = Vector2(-1, 12)
+
+[node name="CustomersOnTable" type="Sprite2D" parent="."]
+position = Vector2(4, 0)
+texture = ExtResource("1_nkquk")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(192, 163, 232, -10, -199, -34, -207, 144)

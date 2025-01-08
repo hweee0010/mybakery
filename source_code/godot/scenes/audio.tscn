@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://lvrf3oycy6ap"]
+
+[ext_resource type="AudioStream" uid="uid://dr0jxyw2coha" path="res://music/ButterBuilding.mp3" id="1_k7lkp"]
+
+[node name="Audio" type="Node2D"]
+visible = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_k7lkp")
+autoplay = true

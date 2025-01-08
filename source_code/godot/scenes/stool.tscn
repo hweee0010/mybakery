@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://1ewd2b6n4lmj"]
+
+[ext_resource type="Texture2D" uid="uid://dqeovrirxh15y" path="res://furniture/Stool.png" id="1_jyg7f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r05s2"]
+size = Vector2(62, 24)
+
+[node name="Stool" type="CharacterBody2D"]
+position = Vector2(-3, 3)
+
+[node name="Stool" type="Sprite2D" parent="."]
+position = Vector2(3, 1)
+texture = ExtResource("1_jyg7f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 42)
+shape = SubResource("RectangleShape2D_r05s2")
