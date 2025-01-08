@@ -1,1 +1,1 @@
-# mybakery
+# MyBakery is a cute, simple bakery game with a twist - serve cakes, socialise with customers and solve mysteries all in one. This is a fun game for adults and children alike! Enjoy gaming.:)
